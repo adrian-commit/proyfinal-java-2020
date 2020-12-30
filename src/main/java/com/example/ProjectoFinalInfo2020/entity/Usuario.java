@@ -2,18 +2,16 @@ package com.example.ProjectoFinalInfo2020.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
-
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
-    private String name;
+    private String nombre;
     private String apellido;
     @Column (unique = true)
     private String email;
@@ -23,58 +21,59 @@ public class Usuario {
     private String provincia;
     private String pais;
     @CreationTimestamp
-    private LocalDateTime fecha;
+    private LocalDate fecha;
 
-    public Long getId() {
+    public Long getId() { 
         return id; }
-    public void setId(Long id) { this.id = id; }
+        
+    public void setId(Long id) { 
+        this.id = id; }
 
-    public String getName() {
-        return name; }
+    public String getNombre() { 
+        return nombre; }
 
-    public void setName(String name) {
-        this.name = name; }
+    public void setNombre(String nombre) { 
+        this.nombre = nombre; }
 
-    public String getApellido() {
+    public String getApellido() { 
         return apellido; }
 
-    public void setApellido(String apellido) {
+    public void setApellido(String apellido) { 
         this.apellido = apellido; }
 
-    public String getEmail() {
+    public String getEmail() { 
         return email; }
 
-    public void setEmail(String email) {
+    public void setEmail(String email) { 
         this.email = email; }
 
-    public Long getPassword() {
+    public Long getPassword() { 
         return password; }
 
-    public void setPassword(Long password) {
+    public void setPassword(Long password) { 
         this.password = password; }
 
-    public String getCiudad() {
+    public String getCiudad() { 
         return ciudad; }
 
-    public void setCiudad(String ciudad) {
+    public void setCiudad(String ciudad) { 
         this.ciudad = ciudad; }
 
-    public String getProvincia() {
+    public String getProvincia() { 
         return provincia; }
 
-    public void setProvincia(String provincia) {
+    public void setProvincia(String provincia) { 
         this.provincia = provincia; }
 
-    public String getPais() {
+    public String getPais() { 
         return pais; }
 
-    public void setPais(String pais) {
+    public void setPais(String pais) { 
         this.pais = pais; }
 
-    public LocalDateTime getFecha() {
+    public LocalDate getFecha() { 
         return fecha; }
 
-    public void setFecha(LocalDateTime fecha) {
+    public void setFecha(LocalDate fecha) { 
         this.fecha = fecha; }
-
 }
